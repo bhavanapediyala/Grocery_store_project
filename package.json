@@ -1,0 +1,26 @@
+{
+  "name": "Grocery_store",
+  "version": "1.0.0",
+  "description": "This is a Exercise project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhavanaPediyala/Grocery_store_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhavanapediyala/Grocery_store_project/issues"
+  },
+  "homepage": "https://github.com/bhavanapediyala/Grocery_store_project#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.0"
+  }
+}
