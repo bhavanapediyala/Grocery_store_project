@@ -1,0 +1,41 @@
+<%- include("_header") -%>
+
+<h1>List of products (<%=model.length %>)</h1>
+
+<div class="table-responsive-sm">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+        <th class="d-print-none">
+          <a class="btn btn-sm btn-success" href="/create">Add</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const items of model) { %>
+        <tr>
+          <td><%= items.Name %></td>
+          <td><%= items.Price %></td>
+          <td><%= items.Quantity %></td>
+          <td><%= items.Cost %></td>
+          <td class="d-print-none">
+            <a class="btn btn-sm btn-warning" href="/edit/<%= items.Product_ID %>">Edit</a>
+            <a class="btn btn-sm btn-danger" href="/delete/<%= items.Product_ID %>">Delete</a>
+          </td>
+        </tr>
+      <% } %>
+      <td colspan="4">Total</td>
+      <% var total = 0
+      for(const items of model) { %>
+        <% total = total + ( items.Price * items.Quantity ) %>
+        <% } %>
+      <td> <%=total%></td>
+    </tbody>
+  </table>
+</div>
+
+<%- include("_footer") -%>
